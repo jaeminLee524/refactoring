@@ -23,6 +23,8 @@ public abstract class Parrot {
 
     public abstract double getSpeed();
 
+    public abstract String getCry();
+
     protected double getBaseSpeed(double voltage) {
         return Math.min(24.0, voltage * getBaseSpeed());
     }
@@ -34,6 +36,4 @@ public abstract class Parrot {
     protected double getBaseSpeed() {
         return 12.0;
     }
-
-    public abstract String getCry();
 }
