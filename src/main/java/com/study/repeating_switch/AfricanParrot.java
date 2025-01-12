@@ -1,5 +1,7 @@
 package com.study.repeating_switch;
 
+import static com.study.repeating_switch.ParrotTypeEnum.AFRICAN;
+
 public class AfricanParrot extends Parrot {
 
     public AfricanParrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, boolean isNailed) {
@@ -13,7 +15,7 @@ public class AfricanParrot extends Parrot {
 
     @Override
     public String getCry() {
-        return switch (type) {
+        return switch (AFRICAN) {
             case EUROPEAN -> "Sqoork!";
             case AFRICAN -> "Sqaark!";
             case NORWEGIAN_BLUE -> voltage > 0 ? "Bzzzzzz" : "...";
