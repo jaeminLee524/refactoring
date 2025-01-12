@@ -20,4 +20,9 @@ public class Company {
         String emailDomain = newEmail.split("@")[1];
         return emailDomain.equals(domainName());
     }
+
+    void updateNoOfEmployees(int noOfEmployees, int delta) {
+        int newNumbers = noOfEmployees + delta;
+        noOfEmployees(newNumbers);
+    }
 }
