@@ -14,6 +14,14 @@ public class ChangeEmailService {
     public void changeEmail(int userId, String newEmail) {
         User user = userRepository.findById(userId);
         Company company = companyRepository.findById(user.companyId());
+        changeEmail(newEmail, user, company);
+
+        companyRepository.save(company);
+        userRepository.save(user);
+        messageBus.sendEmailChangedMessage(userId, newEmail);
+    }
+
+    private void changeEmail(String newEmail, User user, Company company) {
         if (user.email().equals(newEmail)) {
             return;
         }
@@ -33,9 +41,5 @@ public class ChangeEmailService {
 
         user.email(newEmail);
         user.userType(newUserType);
-
-        companyRepository.save(company);
-        userRepository.save(user);
-        messageBus.sendEmailChangedMessage(userId, newEmail);
     }
 }
