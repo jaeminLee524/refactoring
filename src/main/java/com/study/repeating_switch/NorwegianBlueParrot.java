@@ -4,8 +4,11 @@ import static com.study.repeating_switch.ParrotTypeEnum.NORWEGIAN_BLUE;
 
 public class NorwegianBlueParrot extends Parrot {
 
+    protected final double voltage;
+
     public NorwegianBlueParrot(double voltage, boolean isNailed) {
-        super(NORWEGIAN_BLUE, voltage, isNailed);
+        super(NORWEGIAN_BLUE, isNailed);
+        this.voltage = voltage;
     }
 
     @Override
