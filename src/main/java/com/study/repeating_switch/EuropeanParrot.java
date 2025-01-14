@@ -4,8 +4,8 @@ import static com.study.repeating_switch.ParrotTypeEnum.EUROPEAN;
 
 public class EuropeanParrot extends Parrot {
 
-    public EuropeanParrot(int numberOfCoconuts, double voltage, boolean isNailed) {
-        super(EUROPEAN, numberOfCoconuts, voltage, isNailed);
+    public EuropeanParrot(double voltage, boolean isNailed) {
+        super(EUROPEAN, voltage, isNailed);
     }
 
     @Override
