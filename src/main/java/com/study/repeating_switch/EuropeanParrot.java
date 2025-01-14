@@ -4,8 +4,8 @@ import static com.study.repeating_switch.ParrotTypeEnum.EUROPEAN;
 
 public class EuropeanParrot extends Parrot {
 
-    public  EuropeanParrot(boolean isNailed) {
-        super(EUROPEAN, isNailed);
+    public  EuropeanParrot() {
+        super(EUROPEAN);
     }
 
     @Override
